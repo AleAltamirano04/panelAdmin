@@ -17,37 +17,75 @@
     <link rel="shortcut icon" href="img/logo-colegio.png" type="image/x-icon">
     <title>EESTN°2 "Emilio Rebuelto"</title>
 </head>
+<style>
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand img {
+        margin-right: 10px;
+    }
+    .search-bar {
+        display: flex;
+        align-items: center;
+        max-width: 400px; /* Adjust the size as needed */
+        width: 100%;
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    .search-bar input {
+        flex: 1;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px 0 0 4px;
+        height: 46px; /* Adjust height to make it larger */
+    }
+    .search-bar button {
+        padding: 0 15px;
+        border: 1px solid #ccc;
+        border-left: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        height: 46px; /* Adjust height to match the input */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
 
 <body>
     <header>
-        <nav class="navbar nav-underline navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#" style="font-size: 26px; font-weight: 600; color: #222;">
                     <img src="img/logo-colegio.png" alt="" style="width: 50px;">
                     EESTN°2
                 </a>
+                <form class="search-bar">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-
-
-                        
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Inicio</a>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="pages/mesas_examen.html">Mesas de examenes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="pages/Anuncios.html">Anuncios</a>
                         </li>
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"
-                                href=" #">Especialidades</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="#">Especialidades</a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="pages/informatica.html">Informatica</a></li>
                                 <li><a class="dropdown-item" href="#">Electromecanica</a></li>
