@@ -1,340 +1,111 @@
-.arvo-regular {
-    font-family: "Arvo", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.arvo-bold {
-    font-family: "Arvo", serif;
-    font-weight: 500;
-    font-style: normal;
-}
-  
-.arvo-regular-italic {
-    font-family: "Arvo", serif;
-    font-weight: 400;
-    font-style: italic;
-}
-  
-.arvo-bold-italic {
-    font-family: "Arvo", serif;
-    font-weight: 700;
-    font-style: italic;
+body {
+  background-color: #f8f9fa;
 }
 
-body{
-    overflow-x: hidden;
+.navbar .nav-link {
+  color: #000 !important;
 }
 
-/* Search */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-.navbar-brand img {
-  margin-right: 10px;
-}
-.search-bar {
-  display: flex;
-  align-items: center;
+.navbar .nav-link.active::after {
+  content: "";
+  display: block;
   width: 100%;
-  margin-left: 0%;
-  position: relative;
+  height: 2px;
+  background-color: #007bff;
+  margin-top: 2px;
 }
-.search-bar input {
-  flex: 1;
-  padding: 10px 15px; /* Adjust padding for icon space */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  height: 46px; /* Adjust height to make it larger */
+
+.navbar .dropdown-menu {
+  background-color: #f8f9fa;
+  border: none;
+}
+
+.navbar .dropdown-item {
+  color: #000 !important;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #e9ecef;
+}
+
+.navbar .form-inline {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar .form-inline .form-control {
   width: 400px;
 }
-.search-bar .search-icon {
-  position: absolute;
-  right: 10px; /* Position icon inside the input field */
-  top: 50%;
-  transform: translateY(-50%);
-  color: #007bff; /* Make the icon blue */
-  font-size: 20px; /* Adjust icon size as needed */
-  cursor: pointer;
-}
-/* Fin Search */
 
-.nombreApellido-box{
-  width: 100%;
-  height: 100%;
+.navbar .input-group-append .btn {
+  padding: 0 10px;
 }
 
-.nombre-Apellido{
-  color: gray;
-  font-size: 18px;
-  margin-left:38%;
-  margin-top: -10%;
+.search-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.box-perfil{
-  margin-top: 10%;
-  height: 380px;
-  width: 100%;
-  background-color: whitesmoke;
-  margin-left: 10%;
-  border-radius: 10px;
-}
-/* parte medio */
-.box-principal{
-  margin-top: 5%;
-  height: 150px;
-  /* width: 600px; */
-  width: 94.5%;
-  background-color: whitesmoke;
-  margin-left: 5%;
-  margin-right: 0%;
-  border-radius: 10px;
-}
-
-.parte-ArribaMedio-Publi{
-  height: 75px;
-  width: 100%;
-  background-color: whitesmoke;
-  border-radius: 10px 10px 0px 0px;
-  border-bottom: 1.5px solid white;
-}
-
-.parte-AbajoMedio-Publi{
-  height: 75px;
-  width: 100%;
-  background-color: whitesmoke;
-  border-radius: 0px 0px 10px 10px;
-  border-top: 1.5px solid white;
-}
-/* fin par47te medio */
-.box-intinerario{
-  margin-top: 10%;
-  height: 300px;
-  width: 90%;
-  background-color: whitesmoke;
-  margin-right: 10%;
-  border-radius: 10px;
-}
-
-img{
-  margin-top: 9%;
-  margin-left: 9.3%;
-  width: 80%;
-  height: 80%;
-  border-radius: 8px;
-}
-
-.img-perfil{
-  margin-left: 14%;
-  margin-top: -10%;
-  width: 70px;
-  height: 70px;
-  /* border: 5px solid white;
-  border-radius: 100%;
-  object-fit: cover; */
-}
-
-.borde-raro{
-  position: fixed;
-  margin-left: 3.1%;
-  margin-top: 12.3%;
-  width: 74.3px;
-  height: 74.3px;
-  border-radius: 100%;
-  border: solid white;
-}
-
-.custom-button {
-  background-color: #008cba;
-  height: 40px;
-  width: 50%;
-  border: none;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-.custom-button:hover {
-  background-color: #005f5f;
-  transform: scale(1.05);
-}
-
-
-.arvo-bold {
-  font-family: "Arvo", serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.arvo-regular-italic {
-  font-family: "Arvo", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.arvo-bold-italic {
-  font-family: "Arvo", serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.navbar {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.nav-link {
-  font-size: 18px;
-  font-weight: 500;
-}
-.nav-link.active {
-  color: #4169e1 !important;
-  outline: none !important;
-}
-.nav-item {
-  padding-right: 20px;
-}
-.nav-item :hover {
-  text-decoration-color: #4169e1;
-  color: #4169e1;
-}
-.navbar-nav .nav-link.dropdown-toggle {
+.logo {
+  height: 47px;
   width: auto;
-  padding-right: 1rem; /* Ajusta el espaciado derecho según sea necesario */
-}
-/* Para asegurar que el dropdown tenga el mismo tamaño que el enlace */
-.dropdown-menu {
-  min-width: calc(100% - 2rem); /* Ajusta el valor según sea necesario */
-}
-.navbar-nav .dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
-}
-.titulo-principal {
-    position: relative;
-    z-index: 1; /* Colocar el texto por encima del fondo oscuro */
-    color: white;/* Alinear el texto al centro */
-    margin-top: 0; /* Eliminar el margen superior predeterminado del h1 */
-    font-size: 3.5em; /* Tamaño del texto */
-  position: relative;
-  z-index: 1; /* Colocar el texto por encima del fondo oscuro */
-  color: white;
-  text-align: start; /* Alinear el texto al centro */
-  margin-top: 0; /* Eliminar el margen superior predeterminado del h1 */
-  padding-left: 10%; /* Añadir espacio superior para el texto */
-  font-size: 4.9em; /* Tamaño del texto */
 }
 
-
-.titulos {
-  margin-top: 0; /* Eliminar el margen superior predeterminado del h1 */
-  padding-top: 4%; /* Añadir espacio superior para el texto */
-  padding-bottom: 2%;
-  font-size: 3em; /* Tamaño del texto */
+.profile-card {
+  background-image: url('img/informatica.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
-.gretting-section{
-    padding-top: 80px;
+.profile-card .profile-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
 }
 
-.intro-info{
-    font-size: 20px;
-    font-weight: 400;
+.profile-img-small {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
 }
 
-.imagenes {
-    display: flex;
-    justify-content: space-around;
-}
-
-.imagen-container {
-    position: relative;
-    width: 32%;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-.imagen-container img {
-    width: 100%;
-    height: 300px;
-    transition: transform 0.5s ease; /* Transición suave para el filtro de la imagen */
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Superposición oscura con transparencia */
+.publicaciones {
+  background-color: #ffffff;
+  height: 200px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  opacity: 0; /* Inicialmente oculto */
-  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+  justify-content: center;
+  border: 2px dashed #ddd;
+  color: #aaa;
 }
 
-.overlay-text {
-  color: white;
-  font-size: 25px;
-  font-weight: 500;
-  text-align: center;
+.publicaciones p {
   margin: 0;
 }
 
-.imagen-container:hover .overlay {
-  opacity: 1; /* Mostrar superposición cuando se pasa el mouse sobre el contenedor de la imagen */
+.event {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.imagen-container:hover img {
-  transform: scale(
-    1.1
-  ); /* Hacer un pequeño zoom en la imagen al pasar el mouse sobre ella */
+.media img {
+  margin-right: 10px;
 }
 
-footer {
-  padding-top: 80px;
-}
-
-footer p{
-    margin-bottom: 3rem;
-}
-
-footer h5{
-    font-size: 24px ;
-}
-
-time, i{
-    color: gray;
-}
-
-.campo-form{
-    height: 50px;
-    font-size: large;
-}
-
-/* SACARLE LAS FLECHAS AL INPUT DE TIPO NUMERO */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.media-body input {
+  margin-bottom: 10px;
 }
 
 
-footer h5 {
-  font-size: 24px;
+.card-title{
+  color: #000;
 }
+
+.card-text{
+  color: #000;
+}
+
