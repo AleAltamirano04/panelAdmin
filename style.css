@@ -16,6 +16,10 @@ body {
 .profile-img {
   width: 100px;
   height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-img-small {
@@ -26,14 +30,16 @@ body {
 .profile-card {
   background-color: #f8f9fa;
   border: none;
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  max-width: 300px; /* Ajusta este valor según sea necesario */
+  color: white; /* Texto en blanco */
+  height: 330px;
 }
 
 .profile-card .card-body {
   padding: 20px;
-  position: relative;
-  z-index: 1;
+  display: flex;
+  align-items: center;
 }
 
 .profile-card .card-title {
@@ -145,9 +151,30 @@ body {
   z-index: 2;
 }
 
+.profile-img-container {
+  flex-shrink: 0;
+}
+
+.profile-info-container {
+  margin-left: 20px;
+  width: 100%;
+}
+
+.profile-info-container .card-title {
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.profile-info-container .card-text {
+  margin-bottom: 5px;
+}
 
 
-
+.profile-info-container .card-title,
+.profile-info-container .card-text,
+.profile-info-container a {
+  color: white; /* Texto en blanco */
+}
 
 
 
