@@ -34,19 +34,20 @@ body {
   max-width: 300px; /* Ajusta este valor según sea necesario */
   color: white; /* Texto en blanco */
   height: 330px;
+  overflow: hidden; /* Asegura que el contenido no se desborde */
 }
 
 .profile-card .card-body {
   padding: 20px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .profile-card .card-title {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
-
 }
 
 .card-body {
@@ -116,48 +117,39 @@ body {
   width: 550px; /* Tamaño más grande del input */
 }
 
-.profile-card .card-background {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card-background-container {
+  position: relative;
+  height: 70%; /* La imagen de fondo ocupa el 70% de la tarjeta */
+  overflow: hidden;
+  border-radius: 75px; /* Bordes redondeados */
+}
+
+.card-background {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
-}
-.profile-card .profile-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  position: relative;
-  z-index: 2;
-  border: 3px solid white; /* Añadir un borde blanco a la imagen de perfil */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Añadir un sombreado */
-}
-
-.profile-card .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-  z-index: 1;
-}
-
-.profile-card .card-title, .profile-card .card-text, .profile-card .btn {
-  position: relative;
-  z-index: 2;
+  padding: 20px; /* Padding para la imagen de fondo */
+  border-radius: 8px; /* Bordes redondeados para la imagen de fondo */
 }
 
 .profile-img-container {
   flex-shrink: 0;
+  position: relative;
+  z-index: 2; /* Asegura que la imagen de perfil esté por encima de la superposición */
+  margin-top: -120px; /* Para ajustar la posición de la imagen de perfil hacia arriba */
+  text-align: center; /* Centra la imagen de perfil horizontalmente */
 }
 
 .profile-info-container {
-  margin-left: 20px;
+  margin-left: 0; /* Restablece el margen izquierdo */
   width: 100%;
+  text-align: center; /* Centra el texto */
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de la superposición */
+  margin-top: 10px; /* Ajusta el margen superior para el texto */
 }
 
 .profile-info-container .card-title {
@@ -169,12 +161,19 @@ body {
   margin-bottom: 5px;
 }
 
-
 .profile-info-container .card-title,
 .profile-info-container .card-text,
 .profile-info-container a {
-  color: white; /* Texto en blanco */
+  color: black; /* Texto en negro */
 }
+
+.profile-card .btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px; /* Ajusta el margen superior para el botón */
+}
+
+
 
 
 
