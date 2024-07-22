@@ -1,6 +1,11 @@
 /* Custom CSS */
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Color de fondo de la página principal */
+}
+
+.navbar {
+  background-color: #ffffff; /* Fondo blanco para el navbar */
 }
 
 .navbar-brand .logo {
@@ -28,7 +33,7 @@ body {
 }
 
 .profile-card {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Fondo blanco */
   border: none;
   width: 100%;
   max-width: 300px; /* Ajusta este valor según sea necesario */
@@ -42,12 +47,21 @@ body {
   display: flex;
   align-items: center;
   position: relative;
+  /* Ajusta el margen superior del contenedor del perfil para subir el contenido */
+  margin-top: -20px; /* Ajusta este valor según sea necesario */
 }
 
 .profile-card .card-title {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
+}
+
+.card {
+  border: none; /* Quita el borde de la card */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  background-color: #ffffff; /* Fondo blanco para todas las cards */
 }
 
 .card-body {
@@ -152,6 +166,7 @@ body {
   margin-top: 10px; /* Ajusta el margen superior para el texto */
 }
 
+/* Asegúrate de ajustar el margen superior para el botón */
 .profile-info-container .card-title {
   margin-bottom: 10px;
   margin-left: 15px;
@@ -172,6 +187,34 @@ body {
   z-index: 2;
   margin-top: 10px; /* Ajusta el margen superior para el botón */
 }
+
+.larger-card {
+  height: 350px; /* Ajusta la altura según sea necesario */
+  background-color: white; /* Fondo blanco para la card */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.card-body.text-center {
+  position: relative;
+  height: 100%; /* Asegura que el contenido se extienda por toda la altura de la card */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  background-color: white; /* Fondo blanco para el contenido de la card */
+  color: black; /* Texto en negro */
+}
+
+.card-body.text-center p {
+  font-size: 18px; /* Tamaño del texto */
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
+
+
+
+
+
 
 
 
