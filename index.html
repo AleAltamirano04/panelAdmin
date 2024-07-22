@@ -22,10 +22,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <form class="form-inline mx-auto">
-                <div class="input-group">
+                <div class="input-group search-group">
                     <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="submit">
+                        <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
@@ -59,12 +59,20 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card text-center profile-card mb-3">
+                    <div class="card-background-container">
+                        <img src="img/informatica.jpg" class="card-background" alt="Background">
+                        <div class="overlay"></div>
+                    </div>
                     <div class="card-body">
-                        <img src="img/Foto de perfil.jpg" class="rounded-circle mb-3 profile-img" alt="Director">
-                        <h5 class="card-title">Lionel Messi</h5>
-                        <p class="card-text">Director</p>
-                        <p class="card-text"><small class="text-muted">Rol: Administrador</small></p>
-                        <a href="#" class="btn btn-primary">Ir al Perfil</a>
+                        <div class="profile-img-container">
+                            <img src="img/Foto de perfil.jpg" class="rounded-circle mb-3 profile-img" alt="Director">
+                        </div>
+                        <div class="profile-info-container ml-3">
+                            <h5 class="card-title">Lionel Messi</h5>
+                            <p class="card-text">Director</p>
+                            <p class="card-text"><small class="text-muted">Rol: Administrador</small></p>
+                            <a href="#" class="btn btn-primary">Ir al Perfil</a>
+                        </div>
                     </div>
                 </div>
                 <h6>Personas con acceso (4)</h6>
@@ -109,40 +117,75 @@
                                 <input type="text" class="form-control mb-2" placeholder="Crea una nueva publicación...">
                             </div>
                         </div>
-                        <button class="btn btn-primary mt-2">Compartir</button>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <button class="btn btn-primary">Compartir</button>
+                            <div>
+                                <button class="btn btn-light"><i class="fas fa-plus"></i></button>
+                                <button class="btn btn-light"><i class="fas fa-image"></i></button>
+                                <button class="btn btn-light"><i class="fas fa-video"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="publicaciones text-center">
-                    <p>Crea una publicación para verla acá</p>
+                <h5 class="mb-3">Publicaciones</h5>
+                <!-- Aquí inicia la nueva sección de publicaciones -->
+                <div class="card mb-3 larger-card">
+                    <div class="card-body text-center">
+                        <p class="card-text">Crea una publicación para verla acá</p>
+                    </div>
                 </div>
             </div>
             
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Junio 2024</h5>
-                        <div id="calendar" class="mb-3"></div>
-                        <h6>Programa de Eventos</h6>
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <div class="event bg-success text-white p-2 rounded">
-                                    <p class="mb-0">Reunión</p>
-                                    <p class="mb-0"><small>Lun 03 - 09:00 a 10:30</small></p>
+                        <h5 class="card-title d-flex justify-content-between align-items-center">
+                            <i class="fas fa-chevron-left"></i>
+                            Junio 2024
+                            <i class="fas fa-chevron-right"></i>
+                        </h5>
+                        <div id="calendar" class="mb-3 calendar">
+                            <div class="d-flex">
+                                <button class="btn btn-light">S<br>01</button>
+                                <button class="btn btn-light">D<br>02</button>
+                                <button class="btn btn-light">L<br>03</button>
+                                <button class="btn btn-light">M<br>04</button>
+                                <button class="btn btn-light">M<br>05</button>
+                                <button class="btn btn-light">J<br>06</button>
+                                <button class="btn btn-light">V<br>07</button>
+                            </div>
+                            <!-- Aquí se agregarán más días -->
+                        </div>
+                        <h6 class="event-list-title">Programa de Eventos</h6>
+                        <section>
+                            <div style="padding-bottom: 20px;">  <!-- DIA   1   -->
+                                <p>Lun <br> 03</p>
+                                <div class="Box-ProgramaEvent1">
+                                    <b style="padding-left: 14px;">Reunión</b><br>
+                                    <small class="text-muted" style="padding-left: 14px;">09:00 - 10:30</small>
                                 </div>
-                            </li>
-                            <li class="mb-2">
-                                <div class="event bg-danger text-white p-2 rounded">
-                                    <p class="mb-0">Acto 17 de Junio</p>
-                                    <p class="mb-0"><small>Lun 03 - 09:00 a 09:30</small></p>
+                            </div>
+
+                            <div style="padding-bottom: 20px;">  <!-- DIA   2   -->
+                                <p>Lun <br> 03</p>
+                                <div class="Box-ProgramaEvent2">
+                                    <b style="padding-left: 14px;">Acto 17 de julio</b> <br>
+                                    <small class="text-muted" style="padding-left: 14px;">09:00 - 10:30  .  15:00 - 15:30</small>
                                 </div>
-                            </li>
-                            <li class="mb-2">
-                                <div class="event bg-primary text-white p-2 rounded">
-                                    <p class="mb-0">Salida Educativa</p>
-                                    <p class="mb-0"><small>Mié 05 - 13:00 a 15:00</small></p>
+                            </div>
+
+                            <div>  <!-- DIA   3   -->
+                                <p>Mie <br> 05</p>
+                                <div class="Box-ProgramaEvent3">
+                                    <b style="padding-left: 14px;">Salida Educativa</b> <br>
+                                    <small class="text-muted" style="padding-left: 14px;">13:00 - 15:00 </small>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+
+                            <!-- <div>   DIA -- Agregar mas dias
+                                <p>Lun <br> 03</p>
+                            </div> -->
+                        </section>
                     </div>
                 </div>
             </div>
@@ -152,6 +195,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,111 +1,289 @@
+/* Custom CSS */
 body {
-  background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa; /* Color de fondo de la página principal */
 }
 
-.navbar .nav-link {
-  color: #000 !important;
+.navbar {
+  background-color: #ffffff; /* Fondo blanco para el navbar */
 }
 
-.navbar .nav-link.active::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #007bff;
-  margin-top: 2px;
+.navbar-brand .logo {
+  height: 40px;
+  width: 40px;
 }
 
-.navbar .dropdown-menu {
-  background-color: #f8f9fa;
-  border: none;
+.navbar-brand div {
+  line-height: 1;
+  font-size: 14px;
 }
 
-.navbar .dropdown-item {
-  color: #000 !important;
-}
-
-.navbar .dropdown-item:hover {
-  background-color: #e9ecef;
-}
-
-.navbar .form-inline {
-  flex-grow: 1;
-  justify-content: center;
-}
-
-.navbar .form-inline .form-control {
-  width: 400px;
-}
-
-.navbar .input-group-append .btn {
-  padding: 0 10px;
-}
-
-.search-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.logo {
-  height: 47px;
-  width: auto;
-}
-
-.profile-card {
-  background-image: url('img/informatica.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-.profile-card .profile-img {
+.profile-img {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border: 3px solid #fff;
-  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .profile-img-small {
   width: 40px;
   height: 40px;
-  object-fit: cover;
 }
 
-.publicaciones {
-  background-color: #ffffff;
-  height: 200px;
+.profile-card {
+  background-color: #f8f9fa; /* Fondo blanco */
+  border: none;
+  width: 100%;
+  max-width: 300px; /* Ajusta este valor según sea necesario */
+  color: white; /* Texto en blanco */
+  height: 330px;
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.profile-card .card-body {
+  padding: 20px;
   display: flex;
   align-items: center;
+  position: relative;
+  /* Ajusta el margen superior del contenedor del perfil para subir el contenido */
+  margin-top: -20px; /* Ajusta este valor según sea necesario */
+}
+
+.profile-card .card-title {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  border: none; /* Quita el borde de la card */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  background-color: #ffffff; /* Fondo blanco para todas las cards */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  border: 2px dashed #ddd;
-  color: #aaa;
 }
 
-.publicaciones p {
-  margin: 0;
+.calendar .d-flex {
+  flex: 1;
+  justify-content: center;
 }
 
-.event {
+.calendar button {
+  width: 14.28%;
   padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-.media img {
+.card .event-list {
+  margin-top: 20px;
+}
+
+.card .event-list-title {
+  margin-top: 20px;
+}
+
+.event-list .event {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.event-list .event.bg-green {
+  background-color: #28a745;
+}
+
+.event-list .event.bg-red {
+  background-color: #dc3545;
+}
+
+.event-list .event.bg-blue {
+  background-color: #007bff;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title i {
+  cursor: pointer;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
-.media-body input {
+.navbar .form-inline .input-group.search-group .form-control {
+  width: 550px; /* Tamaño más grande del input */
+}
+
+.card-background-container {
+  position: relative;
+  height: 70%; /* La imagen de fondo ocupa el 70% de la tarjeta */
+  overflow: hidden;
+  border-radius: 75px; /* Bordes redondeados */
+}
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px; /* Padding para la imagen de fondo */
+  border-radius: 8px; /* Bordes redondeados para la imagen de fondo */
+}
+
+.profile-img-container {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2; /* Asegura que la imagen de perfil esté por encima de la superposición */
+  margin-top: -120px; /* Para ajustar la posición de la imagen de perfil hacia arriba */
+  text-align: center; /* Centra la imagen de perfil horizontalmente */
+}
+
+.profile-info-container {
+  margin-left: 0; /* Restablece el margen izquierdo */
+  width: 100%;
+  text-align: center; /* Centra el texto */
+  position: relative;
+  z-index: 2; /* Asegura que el texto esté por encima de la superposición */
+  margin-top: 10px; /* Ajusta el margen superior para el texto */
+}
+
+/* Asegúrate de ajustar el margen superior para el botón */
+.profile-info-container .card-title {
   margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.profile-info-container .card-text {
+  margin-bottom: 5px;
+}
+
+.profile-info-container .card-title,
+.profile-info-container .card-text,
+.profile-info-container a {
+  color: black; /* Texto en negro */
+}
+
+.profile-card .btn {
+  position: relative;
+  z-index: 2;
+  margin-top: 10px; /* Ajusta el margen superior para el botón */
+}
+
+.larger-card {
+  height: 350px; /* Ajusta la altura según sea necesario */
+  background-color: white; /* Fondo blanco para la card */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.card-body.text-center {
+  position: relative;
+  height: 100%; /* Asegura que el contenido se extienda por toda la altura de la card */
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  background-color: white; /* Fondo blanco para el contenido de la card */
+  color: black; /* Texto en negro */
+}
+
+.card-body.text-center p {
+  font-size: 18px; /* Tamaño del texto */
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
+.Box-ProgramaEvent1{
+  height: 50px;
+  width: 200px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  border-radius: 5px;
+}
+
+.Box-ProgramaEvent1::before {
+  content: '';
+  position: absolute; /* El pseudo-elemento también es absoluto dentro del div */
+  left: 0;
+  top: 10%; /* Ajusta esta posición según lo necesites */
+  height: 70%; /* Ajusta esta altura según lo necesites */
+  width: 5px; /* Ancho del borde */
+  background-color: rgb(11, 254, 11); /* Color del borde */
+  border-radius: 10px;
+}
+
+.Box-ProgramaEvent2{
+  height: 50px;
+  width: 200px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  border-radius: 5px;
+}
+
+.Box-ProgramaEvent2::before {
+  content: '';
+  position: absolute; /* El pseudo-elemento también es absoluto dentro del div */
+  left: 0;
+  top: 10%; /* Ajusta esta posición según lo necesites */
+  height: 70%; /* Ajusta esta altura según lo necesites */
+  width: 5px; /* Ancho del borde */
+  background-color: rgb(255, 0, 0); /* Color del borde */
+  border-radius: 10px;
+}
+
+.Box-ProgramaEvent3{
+  height: 50px;
+  width: 200px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  border-radius: 5px;
+}
+
+.Box-ProgramaEvent3::before {
+  content: '';
+  position: absolute; /* El pseudo-elemento también es absoluto dentro del div */
+  left: 0;
+  top: 10%; /* Ajusta esta posición según lo necesites */
+  height: 70%; /* Ajusta esta altura según lo necesites */
+  width: 5px; /* Ancho del borde */
+  background-color: blue; /* Color del borde */
+  border-radius: 10px;
 }
 
 
-.card-title{
-  color: #000;
-}
 
-.card-text{
-  color: #000;
-}
+
+
+
+
+
+
+
+
+
+
+
 
