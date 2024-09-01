@@ -106,6 +106,10 @@
                         </div>
                     </li>
                 </ul>
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn btn-primary mt-3" data-toggle="modal" data-target="#exampleModal">
+                    + Crear Usuario
+                </button>
             </div>
             
             <div class="col-md-6">
@@ -191,6 +195,58 @@
             </div>
         </div>
     </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Crear un nuevo usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="role">
+                            <option value="">Rol</option>
+                            <option value="admin">Administrador</option>
+                            <option value="moderator">Moderador</option>
+                            <option value="content-creator">Creador de Contenidos</option>
+                            <option value="exam-manager">Gestor de Mesas de Exámenes</option>
+                        </select>
+                    </div>
+                    <!-- Botón de Agregar Usuario -->
+                    <button type="button" class="add-user-btn">+ Agregar Usuario</button>
+                </form>
+                <div class="access-list">
+                    <p>Personas con acceso (3)</p>
+                    <ul class="list-unstyled">
+                        <li class="user-item">
+                            <img src="img/perfil.png" alt="Lionel Scaloni">
+                            Lionel Scaloni
+                        </li>
+                        <li class="user-item">
+                            <img src="img/perfil.png" alt="Julián Álvarez">
+                            Julián Álvarez
+                        </li>
+                        <li class="user-item">
+                            <img src="img/perfil.png" alt="Paulo Dybala">
+                            Paulo Dybala
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

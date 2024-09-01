@@ -273,17 +273,64 @@ body {
   border-radius: 10px;
 }
 
+/* Estilos personalizados para el modal */
+.modal-content {
+  border-radius: 8px;
+}
 
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
 
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
 
+.access-list {
+  margin-top: 20px;
+}
 
+.access-list p {
+  font-weight: bold;
+}
 
+.user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+.user-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 
+.add-user-btn {
+  display: block;
+  margin-top: 10px;
+  margin-left: 0; /* Para asegurarse de que esté alineado a la izquierda */
+}
 
+/* Estilo para el botón de "+ Agregar Usuario" */
+.add-user-btn {
+  display: block;
+  width: 200px;
+  margin: 10px 0; /* Espacio adecuado alrededor del botón */
+  padding: 10px;
+  background-color: #007bff; /* Color azul para el botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-left: 55%;
+}
 
-
-
-
-
-
+.add-user-btn:hover {
+  background-color: #0056b3; /* Cambiar color al pasar el mouse */
+}
